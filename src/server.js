@@ -1,7 +1,11 @@
 const express = require('express')
 const path = require('path')
+const db = require('./database')
 
 const app = express()
+
+//Connecting the database
+db.connect()
 
 //Defining the engine template
 app.set('view engine', 'ejs')
