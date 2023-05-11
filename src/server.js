@@ -1,6 +1,10 @@
 const express = require('express')
 const path = require('path')
+
+
 const db = require('./database')
+const routes = require('./routes')
+
 
 const app = express()
 
@@ -17,14 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 //Able the server to receive data via post (form)
 app.use(express.urlencoded({ extended: true }))
 
-
-//Routes
-app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Title test'
-    })
-})
-
+//Defining the routes
+app.use('/', routes)
 
 //404 error (not found)
 app.use((req, res) => {

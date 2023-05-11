@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 function connect() {
 
-    mongoose.connect('mongodb://127.0.0.1/')
+    mongoose.connect('mongodb://127.0.0.1/crud-project')
 
     const db = mongoose.connection
 
