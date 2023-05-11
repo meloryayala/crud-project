@@ -1,0 +1,22 @@
+<html lang="en">
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+
+        <%- include('partials/navbar') %>
+
+            <ul>
+                <% users.forEach((users)=> { %>
+                    <li>
+                        <%= users.name %> - <%= users.email %> - <%= users.age %>
+                    </li>
+                    <% }) %>
+            </ul>
+
+            <%- include('partials/foot.ejs') %>
+    </body>
+
+</html>

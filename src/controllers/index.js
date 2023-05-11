@@ -1,6 +1,6 @@
 function index(req, res) {
     res.render('index', {
-        title: 'Title test'
+        title: 'Home'
     })
 }
 

@@ -3,8 +3,14 @@
 
     <body>
         <h1>
-            <% title %>
+            <%= title %>
         </h1>
+
+        <%- include('partials/navbar') %>
+
+        <% if (typeof message !== 'undefined') { %>
+            <%= message %>
+        <% } %>
 
         <form action="/register/add" method="post">
             <div>
