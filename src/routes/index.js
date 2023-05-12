@@ -13,7 +13,12 @@ router.get('/register', CustomersController.index)
 router.post('/register/add', CustomersController.add)
 
 //Listing
-router.get('/list', CustomersController.listUsers)
+router.get('/list', CustomersController.list)
+
+//Editing
+router.get('/edit', CustomersController.formEdit)
+router.post('/edit/:id', CustomersController.edit)
+
 
 
 
