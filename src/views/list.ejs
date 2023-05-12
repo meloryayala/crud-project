@@ -13,6 +13,7 @@
                     <li>
                         <%= users.name %> - <%= users.email %> - <%= users.age %> -
                                     <a href="/edit?id=<%= users._id %>">[Edit]</a>
+                                    <a href="/remove/<%= users._id %>">[Remove]</a>
                     </li>
                     <% }) %>
             </ul>
